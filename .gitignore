@@ -1,2 +1,2 @@
-./cmd/deploy.sh
-./cmd/**/config.toml
+cmd/deploy.sh
+cmd/**/config.toml

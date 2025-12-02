@@ -1,0 +1,24 @@
+package main
+
+import (
+	"flag"
+
+	"ethdataset"
+)
+
+var (
+	path string
+)
+
+func init() {
+	flag.StringVar(&path, "path", "./config.toml", "")
+}
+
+func main() {
+	flag.Parse()
+
+	var cfg ethdataset.RunConfig
+	ethdataset.ReadConfig(path, &cfg)
+	analysisPass := &ethdataset.SizeAnalysis{}
+	ethdataset.Run(cfg, analysisPass)
+}
