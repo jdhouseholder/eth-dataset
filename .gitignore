@@ -1,0 +1,2 @@
+./cmd/deploy.sh
+./cmd/**/config.toml
